@@ -8,14 +8,11 @@ namespace GUSEXPRESS.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public string tablaAfectada { get; set; }
+        public string? tablaAfectada { get; set; }
 
-        [Required]
-        public string Accion { get; set; }
+        public string? Accion { get; set; }
 
-        [Required]
-        public int UsuarioID { get; set; }
+        public int? UsuarioID { get; set; }
 
         [ForeignKey("UsuarioId")]
 

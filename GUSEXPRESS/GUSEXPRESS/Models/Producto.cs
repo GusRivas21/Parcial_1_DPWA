@@ -8,13 +8,10 @@ namespace GUSEXPRESS.Models
 
         public int Id { get; set; }
 
-        [Required]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
-        [Required]
-        public int Cantidad { get; set; }
+        public int? Cantidad { get; set; }
 
-        [Required]
-        public string Tamanio { get; set; }
+        public string? Tamanio { get; set; }
     }
 }

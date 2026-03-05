@@ -8,30 +8,24 @@ namespace GUSEXPRESS.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Telefono { get; set; }
+        public string? Telefono { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Correo { get; set; }
+        public string? Correo { get; set; }
 
-        [Required]
         [StringLength(200)]
-        public string Direccion { get; set; }
+        public string? Direccion { get; set; }
 
-        [Required]
         public DateTime FechaRegistro { get; set; } = DateTime.Now;
 
-        public int RolId { get; set; }
+        public int? RolId { get; set; }
 
         [ForeignKey("RolId")]
 
-        [Required]
         public Rol Roles { get; set; }
 
         public ICollection<Envio> Envios { get; set; }

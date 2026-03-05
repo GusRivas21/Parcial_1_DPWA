@@ -8,27 +8,23 @@ namespace GUSEXPRESS.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Nombre { get; set; }
+        public string? Nombre { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Telefono { get; set; }
+        public string? Telefono { get; set; }
 
-        [Required]
         [StringLength(200)]
-        public string Direccion { get; set; }
+        public string? Direccion { get; set; }
 
-        [Required]
         [StringLength(200)]
-        public string Ciudad { get; set; }
+        public string? Ciudad { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string Pais { get; set; }
+        public string? Pais { get; set; }
 
-        public int UsuarioId { get; set; }
+        public int? UsuarioId { get; set; }
+
         [ForeignKey("UsuarioId")]
         public Usuario Usuarios{ get; set; }
 

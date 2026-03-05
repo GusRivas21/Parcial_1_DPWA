@@ -8,14 +8,19 @@ namespace GUSEXPRESS.Models
         [Key]
         public int Id { get; set; }
 
-        [Required]
-        public int EnvioId { get; set; }
+        public int? EnvioId { get; set; }
 
         [ForeignKey("EnvioId")]
 
         public Envio Envios { get; set; }
 
         [Required]
+        public EstadoEnvio EstadoEnvios { get; set; }
+
+        public int? EstadoEnvioId { get; set; }
+
+        [ForeignKey("EstadoEnvioId")]
+
         [Column(TypeName = "decimal(10,2)")]
         public decimal peso { get; set; }
     }

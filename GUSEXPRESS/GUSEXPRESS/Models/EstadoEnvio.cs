@@ -8,12 +8,14 @@ namespace GUSEXPRESS.Models
 
         public int Id { get; set; }
 
-        [Required]
         [StringLength(100)]
-        public string NombreEstado { get; set; }
+        public string? NombreEstado { get; set; }
 
-        [Required]
         [StringLength(200)]
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
+
+        [StringLength(200)]
+        public ICollection<Envio> Envios { get; set; }
+
     }
 }
